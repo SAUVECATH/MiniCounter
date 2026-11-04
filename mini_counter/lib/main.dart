@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 // ---------------------------------------------------------------------------
 
 /// The moment your relationship started (year, month, day, hour, minute).
-final DateTime kStartDate = DateTime(2026, 10, 27, 18, 0);
+final DateTime kStartDate = DateTime(2026, 10, 24, 18, 0);
 
 /// Small title shown above the counter.
 const String kTitle = 'Ensemble depuis';
@@ -147,8 +147,8 @@ class _CounterScreenState extends State<CounterScreen> {
 
     return Scaffold(
       body: Container(
-        // Pink gradient background, top to bottom.
-        color: const Color(0xFFFFE0EC),
+        // background, top to bottom.
+        color: const Color.fromARGB(255, 188, 183, 183),
         // Stack = layers on top of each other: hearts behind, content in front.
         child: Stack(
           children: [
@@ -183,7 +183,7 @@ class _CounterScreenState extends State<CounterScreen> {
 
                     // Next monthly and yearly anniversaries.
                     Text(
-                      _countdownText('Next monthsary', monthlyDays),
+                      _countdownText('Prochain monthsary', monthlyDays),
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color(0xFF8A1C4A),
@@ -191,7 +191,7 @@ class _CounterScreenState extends State<CounterScreen> {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      _countdownText('Next anniversary', yearlyDays),
+                      _countdownText('Prochain anniversary', yearlyDays),
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color(0xFF8A1C4A),
